@@ -23,12 +23,30 @@ Záleží na Vašem volném čase, který je nutný k vypracování úkolu věno
 
 ---
 
+
+1. Nastaveni Dockerfile
+
 https://github.com/dyarleniber/docker-php
 
 docker-compose build app
 
 docker-compose up -d
 
-docker-compose exec app ls -l
+2. Stažení nette   
+
+git clone https://github.com/nette/web-project
+
+3. Composer install
+ 
+sudo apt-get install zip unzip php5.6-zip
 
 docker-compose exec app composer install
+
+---
+
+Failed to execute 
+
+git clone --no-checkout '/root/.composer/cache/vcs/https---github.com-nette-web-project.git/' '/var/www/test' --dissociate --reference '/root/.composer/cache/vcs/https---github.com-nette-web-project.git/' && cd '/var/www/test' && git remote set-url origin -- 'https://github.com/nette/web-project.git' && git remote add composer -- 'https://github.com/nette/web-project.git'
+
+
+git clone --no-checkout '/root/.composer/cache/vcs/https---github.com-nette-latte.git/' '/var/www/nette/vendor/latte/latte' --dissociate --reference '/root/.composer/cache/vcs/https---github.com-nette-latte.git/' && cd '/var/www/nette/vendor/latte/latte' && git remote set-url origin -- 'https://github.com/nette/latte.git' && git remote add composer -- 'https://github.com/nette/latte.git'
