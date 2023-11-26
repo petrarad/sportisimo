@@ -1,0 +1,22 @@
+{layout "../admin.latte"}
+
+{block content}
+
+<ul class="breadcrumbs">
+    <li>
+        <h1 class="h2" n:block=title>Značky</h1>
+    </li>
+    <li>
+        <span class="material-icons">chevron_right</span>
+    </li>
+    <li>
+        <span class="h2">{if $resource->isNew()}Nový záznam{else}{$resource->getName()}{/if}</span>
+    </li>
+</ul>
+
+<div class="p2">
+    <h2 class="h2">{if $resource->isNew()}Nový záznam{else}{$resource->getName()}{/if}</h2>
+
+    {include '../form.latte', form: form}
+</div>
+{/block}

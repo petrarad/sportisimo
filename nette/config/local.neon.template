@@ -1,0 +1,11 @@
+parameters:
+    debugMode: true
+    database:
+        host: db
+        user: user
+        password: pass
+        dbname: database
+
+application:
+    debugger: true
+

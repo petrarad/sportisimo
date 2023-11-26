@@ -1,3 +1,6 @@
+Zadání
+===
+
 Cílem je tento grafický návrh naprogramovat jako funkční aplikaci v PHP za pomoci Nette frameworku, databáze MySQL, SASS a knihovny Materialize (http://materializecss.com).
 Samozřejmě je možné, že některé z technologií nebudete přímo znát. Pro nás je hlavně důležité, jestli jste schopen se případně o dané technologii něco doučit a pokusit se použít.
 Požadované funkce (implementovat vlastním kódem, bez použití volně šiřitelných gridů apod.):
@@ -21,32 +24,32 @@ Ve Vašem případě, protože se ucházíte o post team leadera, nebudeme brát
 Záleží na Vašem volném čase, který je nutný k vypracování úkolu věnovat. Spíše se věnujte čistotě kódu, jeho bezpečnosti a udržitelnosti, které jsou pro nás důležitějším kritériem nežli čas. :) Klademe důraz na bezpečnost a čistotu kódu jako když jde do produkce resp. neměl by padat v chybách. Vnímáme i ošetření krajních stavů...
 
 
----
 
+Spuštění
+===
 
-1. Nastaveni Dockerfile
+1. Docker build
 
-https://github.com/dyarleniber/docker-php
+```docker build```
 
-docker-compose build app
+2. Docker compose
 
-docker-compose up -d
-
-2. Stažení nette   
-
-git clone https://github.com/nette/web-project
+```docker compose up -d```
 
 3. Composer install
- 
-sudo apt-get install zip unzip php5.6-zip
 
-docker-compose exec app composer install
+```docker exec -it php-app /bin/bash```
 
----
+```cd nette```
 
-Failed to execute 
+```composer install```
 
-git clone --no-checkout '/root/.composer/cache/vcs/https---github.com-nette-web-project.git/' '/var/www/test' --dissociate --reference '/root/.composer/cache/vcs/https---github.com-nette-web-project.git/' && cd '/var/www/test' && git remote set-url origin -- 'https://github.com/nette/web-project.git' && git remote add composer -- 'https://github.com/nette/web-project.git'
+Db model
+===
+
+![Diagram](diagram.png "Diagram")
+
+Skript pro inicializaci DB včetně dat: [database.sql](database.sql)
 
 
-git clone --no-checkout '/root/.composer/cache/vcs/https---github.com-nette-latte.git/' '/var/www/nette/vendor/latte/latte' --dissociate --reference '/root/.composer/cache/vcs/https---github.com-nette-latte.git/' && cd '/var/www/nette/vendor/latte/latte' && git remote set-url origin -- 'https://github.com/nette/latte.git' && git remote add composer -- 'https://github.com/nette/latte.git'
+

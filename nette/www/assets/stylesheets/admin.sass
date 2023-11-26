@@ -1,0 +1,202 @@
+$s1: 0.725rem
+$s2: 1.25rem
+$s3: 2.5rem
+$s4: 5rem
+
+$sidebarWidth: 12rem
+$sidebarMiniWidth: 4rem
+
+$fontBold: 600
+
+$colorWhite: #ffffff
+
+$colorText: #333333
+
+$colorPrimary: #2c57b2
+$colorSecondary: #1171de
+
+// reset
+ul, li, p, fieldset, h1, h2, h3, h4, p
+    padding: 0
+    margin: 0
+h1, h2, h3, h4
+    line-height: 1em
+p
+    line-height: 1.3em
+
+.h1
+    font-size: 2rem
+    font-weight: $fontBold
+.h2
+    font-size: 1.5rem
+    font-weight: $fontBold
+.h3
+    font-size: 1.25rem
+    font-weight: $fontBold
+.h4
+    font-size: 1.125rem
+    font-weight: $fontBold
+
+.p1
+    padding: $s1
+.p2
+    padding: $s2
+.p3
+    padding: $s3
+.p4
+    padding: $s4
+.mb1
+    margin-bottom: $s1
+.mb2
+    margin-bottom: $s2
+.mb3
+    margin-bottom: $s3
+.mb4
+    margin-bottom: $s4
+.mr1
+    margin-right: $s1
+.mr2
+    margin-right: $s2
+.mr3
+    margin-right: $s3
+.mr4
+    margin-right: $s4
+.ml1
+    margin-left: $s1
+.ml2
+    margin-left: $s2
+.ml3
+    margin-left: $s3
+.ml4
+    margin-left: $s4
+.mt1
+    margin-top: $s1
+.mt2
+    margin-top: $s2
+.mt3
+    margin-top: $s3
+.mt4
+    margin-top: $s4
+
+.flex
+    display: flex
+
+.btn
+    .material-icons
+        position: relative
+        top: 0.25em
+        vertical-align: top
+
+.font-base
+    font-size: 1rem
+.font-1
+    font-size: $s1
+.font-2
+    font-size: $s2
+.font-3
+    font-size: $s3
+.font-4
+    font-size: $s4
+
+.font-bold
+    font-weight: $fontBold
+
+.text-center
+    text-align: center
+
+.layout
+    display: flex
+    height: 100vh
+    width: 100vw
+    background-color: $colorPrimary
+    > .sidebar
+        width: $sidebarWidth
+        color: $colorWhite
+        transition: width .1s
+        .material-icons
+            margin-right: $s1
+        .label
+            color: $colorWhite
+            text-transform: uppercase
+            font-weight: 600
+            font-size: 1.25rem
+    > .main
+        display: flex
+        flex-direction: column
+        width: calc(100vw - #{$sidebarWidth})
+        transition: width .1s
+        height: 100vh
+        > .header
+            color: $colorWhite
+            .toggle
+                margin-right: $s1
+                color: $colorWhite
+        > .content
+            min-height: calc(100vh - 200px)
+            background-color: $colorWhite
+            height: 100vh
+    &.sidebar-mini
+        > .sidebar
+            width: $sidebarMiniWidth
+            .label
+                display: none
+        > .main
+            width: calc(100vw - #{$sidebarMiniWidth})
+
+
+.sidebar
+    box-shadow: 0 0 4px #00000066
+    .menu
+        li
+            display: block
+            a
+                display: block
+                padding: $s2
+                color: $colorWhite
+                &:hover
+                    background-color: lighten($colorPrimary, 10%)
+
+.breadcrumbs
+    background-color: $colorSecondary
+    color: $colorWhite
+    display: flex
+    align-items: center
+    padding-left: $s1
+    padding-right: $s1
+    li
+        display: block
+        padding: $s2 $s1
+ul.breadcrumbs // override materialize default value
+    padding-left: $s1
+
+
+.paginator
+    display: flex
+    li
+        display: block
+        a, span
+            width: 3rem
+            padding: $s1
+            vertical-align: middle
+            text-align: center
+            display: block
+            border-bottom: 2px solid transparent
+            background-color: #ececec
+            margin-right: $s1
+            color: $colorText
+        a:hover
+            border-bottom: 2px solid $colorSecondary
+        span.active
+            border-bottom: 2px solid $colorPrimary
+
+.orderColumn
+    vertical-align: middle
+    border-bottom: 2px solid transparent
+    text-align: center
+    display: inline-block
+    &.active
+        border-bottom: 2px solid $colorPrimary
+        color: $colorText
+
+.material-icons
+    vertical-align: text-bottom

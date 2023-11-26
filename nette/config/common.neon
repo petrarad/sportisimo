@@ -1,5 +1,7 @@
 parameters:
 
+includes:
+    - doctrine.neon
 
 application:
 	errorPresenter: Error

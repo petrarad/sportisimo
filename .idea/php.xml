@@ -10,6 +10,67 @@
     <option name="highlightLevel" value="WARNING" />
     <option name="transferred" value="true" />
   </component>
+  <component name="PhpIncludePathManager">
+    <include_path>
+      <path value="$PROJECT_DIR$/nette/vendor/nettrine/dbal" />
+      <path value="$PROJECT_DIR$/nette/vendor/nettrine/cache" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/thanks" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/http" />
+      <path value="$PROJECT_DIR$/nette/vendor/composer" />
+      <path value="$PROJECT_DIR$/nette/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/nette/vendor/psr/cache" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/deprecations" />
+      <path value="$PROJECT_DIR$/nette/vendor/ramsey/uuid-doctrine" />
+      <path value="$PROJECT_DIR$/nette/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/nette/vendor/ramsey/collection" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/nette/vendor/contributte/di" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/mail" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/schema" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/neon" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/di" />
+      <path value="$PROJECT_DIR$/nette/vendor/latte/latte" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/php-generator" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/finder" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/database" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/routing" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/component-model" />
+      <path value="$PROJECT_DIR$/nette/vendor/tracy/tracy" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/tester" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/caching" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/bootstrap" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/forms" />
+      <path value="$PROJECT_DIR$/nette/vendor/contributte/console" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/robot-loader" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/security" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/utils" />
+      <path value="$PROJECT_DIR$/nette/vendor/nette/application" />
+      <path value="$PROJECT_DIR$/nette/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/annotations" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/string" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/nette/vendor/brick/math" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/orm" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/deprecation-contracts" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/console" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/persistence" />
+      <path value="$PROJECT_DIR$/nette/vendor/nettrine/orm" />
+      <path value="$PROJECT_DIR$/nette/vendor/nettrine/annotations" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/polyfill-intl-grapheme" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/collections" />
+      <path value="$PROJECT_DIR$/nette/vendor/symfony/polyfill-intl-normalizer" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/common" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/nette/vendor/doctrine/instantiator" />
+    </include_path>
+  </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="8.0" />
   <component name="PhpStanOptionsConfiguration">
     <option name="transferred" value="true" />

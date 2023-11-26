@@ -1,0 +1,46 @@
+extensions:
+	console: Contributte\Console\DI\ConsoleExtension(%consoleMode%)
+	dbal: Nettrine\DBAL\DI\DbalExtension
+	dbal.console: Nettrine\DBAL\DI\DbalConsoleExtension
+	orm: Nettrine\ORM\DI\OrmExtension
+	nettrine.annotations: Nettrine\Annotations\DI\AnnotationsExtension
+	orm.annotations: Nettrine\ORM\DI\OrmAnnotationsExtension
+	orm.console: Nettrine\ORM\DI\OrmConsoleExtension
+#	migrations: Nettrine\Migrations\DI\MigrationsExtension
+	orm.cache: Nettrine\Cache\DI\CacheExtension
+
+dbal:
+	debug:
+		panel: %debugMode%
+	connection:
+		host: %database.host%
+		user: %database.user%
+		password: %database.password%
+		dbname: %database.dbname%
+		driver: pdo_mysql
+#
+#		types:
+#			uuid:
+#				class: Ramsey\Uuid\Doctrine\UuidType
+#				commented: false
+
+#orm:
+#	configuration:
+#		customStringFunctions:
+#			group_concat: DoctrineExtensions\Query\Mysql\GroupConcat
+
+orm.annotations:
+	mapping:
+		App\Model\Database: %appDir%/Model/Database
+
+#nettrine.orm.annotations:
+#	namespaces:
+#		- App\Model\Database\Entity
+#	paths:
+#		- %appDir%/model/Database/Entity
+
+#migrations:
+#    table: doctrine_migrations
+#    column: version
+#    directory: %appDir%/../migrations
+#    namespace: Migrations

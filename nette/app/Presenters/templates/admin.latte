@@ -1,0 +1,103 @@
+{layout "@layout.latte"}
+
+{block stylesheets}
+	{include parent}
+	<link rel="stylesheet" type="text/css" href="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.8/jquery.jgrowl.min.css" />
+	<link rel="stylesheet" href="/assets/stylesheets/admin.css">
+{/block}
+
+{block javascripts}
+	{include parent}
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-jgrowl/1.4.8/jquery.jgrowl.min.js"></script>
+    <script src="/assets/javascripts/admin.js"></script>
+{/block}
+
+{block container}
+	<div class="layout{if $sidebarToggled} sidebar-mini{/if}" id="adminLayout">
+		<div class="sidebar">
+			{control sidebar}
+		</div>
+		<div class="main">
+			<div class="header p2">
+                <a href="#" class="toggle{if $sidebarToggled} toggle-active{/if}" data-target="#adminLayout" data-toggle-class="sidebar-mini" data-toggle-persistent="sidebar">
+                    <span class="material-icons">menu</span>
+                    <span class="label"></span>
+                </a>
+				{block header}
+					<span class="h2">Admin</span>
+				{/block}
+			</div>
+			<div class="content">
+				{include content}
+			</div>
+		</div>
+	</div>
+{/block}
+
+{block paginator}
+	{var $pageFrom = $paginator->page - 2}
+	{if $pageFrom < 1}
+		{var $pageFrom = 1 }
+	{/if}
+	{var $pageTo = $paginator->page + 2}
+	{if $pageTo > $paginator->getLastPage()}
+		{var $pageTo = $paginator->getLastPage() }
+	{/if}
+
+	<ul class="paginator left">
+		{if $pageFrom > 1}
+			<li><a n:href="collection, 1, $paginator->getItemsPerPage()">1</a></li>
+		{/if}
+		{if $pageFrom > 2}
+			<li><span>...</span></li>
+		{/if}
+
+		{for $i = $pageFrom; $i <= $pageTo; $i++}
+			{if $i == $paginator->getPage()}
+				<li><span class="active">{$i}</span></li>
+			{else}
+				<li><a n:href="collection, $i, $paginator->getItemsPerPage()">{$i}</a></li>
+			{/if}
+		{/for}
+
+		{if $pageTo < $paginator->getLastPage() - 1}
+			<li><span>...</span></li>
+		{/if}
+
+		{if $pageTo < $paginator->getLastPage()}
+			<li><a n:href="collection, $paginator->getLastPage(), $paginator->getItemsPerPage()">{$paginator->getLastPage()}</a></li>
+		{/if}
+	</ul>
+
+	<ul class="paginator right">
+		{foreach [2,5,10,20] as $i}
+			{if $i == $paginator->getItemsPerPage()}
+				<li><span class="active">{$i}</span></li>
+			{else}
+
+				<li><a n:href="collection, 1, $i">{$i}</a></li>
+			{/if}
+		{/foreach}
+	</ul>
+{/block}
+{block tableColumnOrder}
+    {if $orderColumn == $column && $orderAscending}
+        <span class="orderColumn active">
+            <span class="material-icons">arrow_upward</span>
+        </span>
+    {else}
+        <a n:href="collection, 1, $paginator->getItemsPerPage(), $column, true" class="orderColumn">
+            <span class="material-icons">arrow_upward</span>
+        </a>
+    {/if}
+    {if $orderColumn == $column && !$orderAscending}
+        <span class="orderColumn active">
+            <span class="material-icons">arrow_downward</span>
+        </span>
+    {else}
+        <a n:href="collection, 1, $paginator->getItemsPerPage(), $column, false" class="orderColumn">
+            <span class="material-icons">arrow_downward</span>
+        </a>
+    {/if}
+{/block}

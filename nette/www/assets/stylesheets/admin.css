@@ -1,0 +1,272 @@
+ul, li, p, fieldset, h1, h2, h3, h4, p {
+  padding: 0;
+  margin: 0;
+}
+
+h1, h2, h3, h4 {
+  line-height: 1em;
+}
+
+p {
+  line-height: 1.3em;
+}
+
+.h1 {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+.h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.h4 {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.p1 {
+  padding: 0.725rem;
+}
+
+.p2 {
+  padding: 1.25rem;
+}
+
+.p3 {
+  padding: 2.5rem;
+}
+
+.p4 {
+  padding: 5rem;
+}
+
+.mb1 {
+  margin-bottom: 0.725rem;
+}
+
+.mb2 {
+  margin-bottom: 1.25rem;
+}
+
+.mb3 {
+  margin-bottom: 2.5rem;
+}
+
+.mb4 {
+  margin-bottom: 5rem;
+}
+
+.mr1 {
+  margin-right: 0.725rem;
+}
+
+.mr2 {
+  margin-right: 1.25rem;
+}
+
+.mr3 {
+  margin-right: 2.5rem;
+}
+
+.mr4 {
+  margin-right: 5rem;
+}
+
+.ml1 {
+  margin-left: 0.725rem;
+}
+
+.ml2 {
+  margin-left: 1.25rem;
+}
+
+.ml3 {
+  margin-left: 2.5rem;
+}
+
+.ml4 {
+  margin-left: 5rem;
+}
+
+.mt1 {
+  margin-top: 0.725rem;
+}
+
+.mt2 {
+  margin-top: 1.25rem;
+}
+
+.mt3 {
+  margin-top: 2.5rem;
+}
+
+.mt4 {
+  margin-top: 5rem;
+}
+
+.flex {
+  display: flex;
+}
+
+.btn .material-icons {
+  position: relative;
+  top: 0.25em;
+  vertical-align: top;
+}
+
+.font-base {
+  font-size: 1rem;
+}
+
+.font-1 {
+  font-size: 0.725rem;
+}
+
+.font-2 {
+  font-size: 1.25rem;
+}
+
+.font-3 {
+  font-size: 2.5rem;
+}
+
+.font-4 {
+  font-size: 5rem;
+}
+
+.font-bold {
+  font-weight: 600;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.layout {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: #2c57b2;
+}
+.layout > .sidebar {
+  width: 12rem;
+  color: #ffffff;
+  transition: width 0.1s;
+}
+.layout > .sidebar .material-icons {
+  margin-right: 0.725rem;
+}
+.layout > .sidebar .label {
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+.layout > .main {
+  display: flex;
+  flex-direction: column;
+  width: calc(100vw - 12rem);
+  transition: width 0.1s;
+  height: 100vh;
+}
+.layout > .main > .header {
+  color: #ffffff;
+}
+.layout > .main > .header .toggle {
+  margin-right: 0.725rem;
+  color: #ffffff;
+}
+.layout > .main > .content {
+  min-height: calc(100vh - 200px);
+  background-color: #ffffff;
+  height: 100vh;
+}
+.layout.sidebar-mini > .sidebar {
+  width: 4rem;
+}
+.layout.sidebar-mini > .sidebar .label {
+  display: none;
+}
+.layout.sidebar-mini > .main {
+  width: calc(100vw - 4rem);
+}
+
+.sidebar {
+  box-shadow: 0 0 4px #00000066;
+}
+.sidebar .menu li {
+  display: block;
+}
+.sidebar .menu li a {
+  display: block;
+  padding: 1.25rem;
+  color: #ffffff;
+}
+.sidebar .menu li a:hover {
+  background-color: #416fd0;
+}
+
+.breadcrumbs {
+  background-color: #1171de;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  padding-left: 0.725rem;
+  padding-right: 0.725rem;
+}
+.breadcrumbs li {
+  display: block;
+  padding: 1.25rem 0.725rem;
+}
+
+ul.breadcrumbs {
+  padding-left: 0.725rem;
+}
+
+.paginator {
+  display: flex;
+}
+.paginator li {
+  display: block;
+}
+.paginator li a, .paginator li span {
+  width: 3rem;
+  padding: 0.725rem;
+  vertical-align: middle;
+  text-align: center;
+  display: block;
+  border-bottom: 2px solid transparent;
+  background-color: #ececec;
+  margin-right: 0.725rem;
+  color: #333333;
+}
+.paginator li a:hover {
+  border-bottom: 2px solid #1171de;
+}
+.paginator li span.active {
+  border-bottom: 2px solid #2c57b2;
+}
+
+.orderColumn {
+  vertical-align: middle;
+  border-bottom: 2px solid transparent;
+  text-align: center;
+  display: inline-block;
+}
+.orderColumn.active {
+  border-bottom: 2px solid #2c57b2;
+  color: #333333;
+}
+
+.material-icons {
+  vertical-align: text-bottom;
+}
+
+/*# sourceMappingURL=admin.css.map */
