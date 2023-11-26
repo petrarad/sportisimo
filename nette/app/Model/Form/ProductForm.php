@@ -26,6 +26,7 @@ class ProductForm extends BaseEntityForm {
         /** @var Product $entity */
         $this
             ->addText('name', 'Název')
+            ->addRule(Form::MaxLength, 'Maximální délka je 255', 255)
             ->setRequired()
             ->setDefaultValue($this->tryToGet($entity, 'name', ''))
         ;

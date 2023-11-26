@@ -12,6 +12,7 @@ class BrandForm extends BaseEntityForm {
         /** @var Brand $entity */
         $this
             ->addText('name', 'Název')
+            ->addRule(\Nette\Forms\Form::MaxLength, 'Maximální délka je 255', 255)
             ->setRequired()
             ->setDefaultValue($this->tryToGet($entity, 'name', ''))
         ;
